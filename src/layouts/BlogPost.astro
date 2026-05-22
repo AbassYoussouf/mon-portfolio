@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 const { title = "Portfolio", description = "Portfolio cybersécurité" } = Astro.props;
 ---
 <!doctype html>
@@ -10,8 +11,8 @@ const { title = "Portfolio", description = "Portfolio cybersécurité" } = Astro
     <title>{title}</title>
   </head>
   <body>
-    <header>
-      <nav>
+    <header class="site-header">
+      <nav class="nav">
         <a href="/">Accueil</a>
         <a href="/about">À propos</a>
         <a href="/blog">Blog</a>
@@ -22,7 +23,7 @@ const { title = "Portfolio", description = "Portfolio cybersécurité" } = Astro
       <slot />
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p>© 2026 Abass Youssouf</p>
     </footer>
   </body>

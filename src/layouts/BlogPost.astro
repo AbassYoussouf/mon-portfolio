@@ -1,43 +1,5 @@
----
-import "../styles/global.css";
-const { title = "Portfolio", description = "Portfolio cybersécurité" } = Astro.props;
----
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={description} />
-    <title>{title}</title>
-  </head>
-  <body>
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="/">Abass YOUSSOUF</a>
-    <nav class="nav" aria-label="Navigation principale">
-      <a class="nav-link" href="/">Accueil</a>
-      <a class="nav-link" href="/about">À propos</a>
-      <a class="nav-link" href="/blog">Blog</a>
-    </nav>
-  </div>
-</header>
-
-<style is:global>
-  .nav-link {
-    background: red !important;
-    color: white !important;
-    padding: 20px !important;
-    margin: 10px !important;
-    display: inline-block !important;
-  }
-</style>
-
-    <main>
-      <slot />
-    </main>
-
-    <footer class="site-footer">
-      <p>© 2026 Abass Youssouf</p>
-    </footer>
-  </body>
-</html>
+<body>
+  <h1 style="background:red;color:white;padding:40px">
+    TEST BLOGPOST
+  </h1>
+</body>

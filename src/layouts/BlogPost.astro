@@ -1,5 +1,5 @@
 ---
-const { title = "Portfolio Cyber", description = "Portfolio d'ingénieur en cybersécurité", image = "/og.jpg" } = Astro.props;
+const { title = "Portfolio", description = "Portfolio cybersécurité" } = Astro.props;
 ---
 <!doctype html>
 <html lang="fr">
@@ -7,16 +7,23 @@ const { title = "Portfolio Cyber", description = "Portfolio d'ingénieur en cybe
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#050816" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
     <title>{title}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <slot />
+    <header>
+      <nav>
+        <a href="/">Accueil</a>
+        <a href="/about">À propos</a>
+        <a href="/blog">Blog</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <p>© 2026 Abass Youssouf</p>
+    </footer>
   </body>
 </html>

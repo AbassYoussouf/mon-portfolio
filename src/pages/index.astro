@@ -1,50 +1,62 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
+<BaseLayout title="Abass Youssouf | Ingénieur cybersécurité" description="Portfolio moderne d'ingénieur en cybersécurité, projets, blog et contact.">
+  <main>
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div>
+          <span class="kicker">Disponible pour opportunités • Cloudflare + Astro</span>
+          <h1 class="title">Ingénieur en cybersécurité.<br/>Portfolio moderne, rapide et élégant.</h1>
+          <p class="muted" style="font-size:1.08rem;max-width:62ch;line-height:1.7">
+            J’aide à sécuriser les systèmes, automatiser les tâches, construire des environnements cloud propres et produire des analyses claires. Ici, tu trouveras mes projets, mes write-ups et mes expériences en cybersécurité.
+          </p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px">
+            <a class="btn btn-primary" href="#projects">Voir mes projets</a>
+            <a class="btn glass" href="#contact">Me contacter</a>
+          </div>
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+          <div class="stats">
+            <div class="glass stat"><strong>10+</strong><span class="muted">Projets sécurité</span></div>
+            <div class="glass stat"><strong>5</strong><span class="muted">Domaines couverts</span></div>
+            <div class="glass stat"><strong>24/7</strong><span class="muted">Focus sur l'amélioration</span></div>
+          </div>
+        </div>
+
+        <div class="glass card" style="min-height:420px;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <span class="kicker">Profil</span>
+            <h2 style="margin:16px 0 10px">Cybersecurity Engineer</h2>
+            <p class="muted" style="line-height:1.7">
+              Spécialisé en sécurité web, automatisation, audit, hardening, Linux, cloud et visibilité des risques. Le portfolio est pensé pour être facile à modifier dans ton repo Astro.
+            </p>
+          </div>
+          <div>
+            <p class="muted" style="margin-bottom:10px">Stack principale</p>
+            <div>
+              <span class="tag">Astro</span><span class="tag">Cloudflare Workers</span><span class="tag">TypeScript</span><span class="tag">Linux</span><span class="tag">Burp Suite</span><span class="tag">Docker</span><span class="tag">Wireshark</span><span class="tag">Nmap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="grid cards">
+          <article class="glass card"><span class="tag">Projet</span><h3>Audit d’application web</h3><p class="muted">Analyse des failles, reproduction, preuve de concept et recommandations de correction.</p></article>
+          <article class="glass card"><span class="tag">Projet</span><h3>Dashboard de veille sécurité</h3><p class="muted">Agrégation de flux RSS, alertes, scoring et suivi des CVE et tendances.</p></article>
+          <article class="glass card"><span class="tag">Projet</span><h3>Lab DevSecOps</h3><p class="muted">Pipeline CI/CD avec scans, secrets checking et durcissement des déploiements.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid cards">
+        <article class="glass card"><h3>Compétences</h3><p class="muted">Sécurité offensive, défensive, cloud, scripting, revue de code, monitoring.</p></article>
+        <article class="glass card"><h3>Blog</h3><p class="muted">Write-ups CTF, analyses de vulnérabilités, retours d’expérience et notes techniques.</p></article>
+        <article class="glass card" id="contact"><h3>Contact</h3><p class="muted">Email, LinkedIn, GitHub, et formulaire de contact pour missions ou collaborations.</p></article>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

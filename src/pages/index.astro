@@ -1,8 +1,60 @@
----
+
 import BlogPost from "../layouts/BlogPost.astro";
----
-<BlogPost>
-  <h1 style="background:red;color:white;padding:40px">
-    TEST INDEX
-  </h1>
+
+<BlogPost title="Abass Youssouf | Ingénieur cybersécurité" description="Portfolio moderne d'ingénieur en cybersécurité, projets, blog et contact.">
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <span class="kicker">Disponible pour opportunités • Cloudflare + Astro</span>
+        <h1 class="title">Ingénieur en cybersécurité.<br/>Portfolio moderne, rapide et élégant.</h1>
+        <p class="muted" style="font-size:1.08rem;max-width:62ch;line-height:1.7">
+          J’aide à sécuriser les systèmes, automatiser les tâches, construire des environnements cloud propres et produire des analyses claires. Ici, tu trouveras mes projets, mes write-ups et mes expériences en cybersécurité.
+        </p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px">
+          <a class="btn btn-primary" href="#projects">Voir mes projets</a>
+          <a class="btn glass" href="#contact">Me contacter</a>
+        </div>
+
+        <div class="stats">
+          <div class="glass stat"><strong>10+</strong><span class="muted">Projets sécurité</span></div>
+          <div class="glass stat"><strong>5</strong><span class="muted">Domaines couverts</span></div>
+          <div class="glass stat"><strong>24/7</strong><span class="muted">Focus sur l'amélioration</span></div>
+        </div>
+      </div>
+
+      <div class="glass card" style="min-height:420px;display:flex;flex-direction:column;justify-content:space-between">
+        <div>
+          <span class="kicker">Profil</span>
+          <h2 style="margin:16px 0 10px">Cybersecurity Engineer</h2>
+          <p class="muted" style="line-height:1.7">
+            Spécialisé en sécurité web, automatisation, audit, hardening, Linux, cloud et visibilité des risques.
+          </p>
+        </div>
+        <div>
+          <p class="muted" style="margin-bottom:10px">Stack principale</p>
+          <div>
+            <span class="tag">Astro</span><span class="tag">Cloudflare Workers</span><span class="tag">TypeScript</span><span class="tag">Linux</span><span class="tag">Burp Suite</span><span class="tag">Docker</span><span class="tag">Wireshark</span><span class="tag">Nmap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="grid cards">
+        <article class="glass card"><span class="tag">Projet</span><h3>Audit d’application web</h3><p class="muted">Analyse des failles, reproduction, preuve de concept et recommandations de correction.</p></article>
+        <article class="glass card"><span class="tag">Projet</span><h3>Dashboard de veille sécurité</h3><p class="muted">Agrégation de flux RSS, alertes, scoring et suivi des CVE et tendances.</p></article>
+        <article class="glass card"><span class="tag">Projet</span><h3>Lab DevSecOps</h3><p class="muted">Pipeline CI/CD avec scans, secrets checking et durcissement des déploiements.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid cards">
+      <article class="glass card"><h3>Compétences</h3><p class="muted">Sécurité offensive, défensive, cloud, scripting, revue de code, monitoring.</p></article>
+      <article class="glass card"><h3>Blog</h3><p class="muted">Write-ups CTF, analyses de vulnérabilités, retours d’expérience et notes techniques.</p></article>
+      <article class="glass card" id="contact"><h3>Contact</h3><p class="muted">Email, LinkedIn, GitHub, et formulaire de contact pour missions ou collaborations.</p></article>
+    </div>
+  </section>
 </BlogPost>
